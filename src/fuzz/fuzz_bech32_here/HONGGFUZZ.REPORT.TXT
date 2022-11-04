@@ -1,0 +1,71 @@
+=====================================================================
+TIME: 2022-11-04.14:53:26
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 5
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 1 (sec)
+ ignoreAddr      : (nil)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ dynFileMethod   : 
+ fuzzTarget      : ../bech32_fuzz ___FILE___ @@ 
+CRASH:
+DESCRIPTION: 
+ORIG_FNAME: 00000000000000000000000000000000.00000000.honggfuzz.cov
+FUZZ_FNAME: /home/onurinanc/honggfuzz_works/firo/src/fuzz/fuzz_bech32_here/SIGBUS.PC.7ffff795b6bd.STACK.182eef56b0.CODE.2.ADDR.7fffe56e6000.INSTR.vpcmpeqb_(%rdi),%ymm0,%ymm1.fuzz
+PID: 12050
+SIGNAL: SIGBUS (7)
+PC: 0x7ffff795b6bd
+FAULT ADDRESS: 0x7fffe56e6000
+INSTRUCTION: vpcmpeqb_(%rdi),%ymm0,%ymm1
+STACK HASH: 000000182eef56b0
+STACK:
+ <0x0000000000403ee8> [func:std::char_traits<char>::length file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x0000000000404192> [func:std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> > file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x0000000000403bd4> [func:LLVMFuzzerTestOneInput file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x000000000041363f> [func:HonggfuzzMain file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x00007ffff7829510> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x00007ffff78295c9> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x0000000000403ac5> [func:_start file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+=====================================================================
+=====================================================================
+TIME: 2022-11-04.14:53:26
+=====================================================================
+FUZZER ARGS:
+ mutationsPerRun : 5
+ externalCmd     : NULL
+ fuzzStdin       : FALSE
+ timeout         : 1 (sec)
+ ignoreAddr      : (nil)
+ ASLimit         : 0 (MiB)
+ RSSLimit        : 0 (MiB)
+ DATALimit       : 0 (MiB)
+ wordlistFile    : NULL
+ dynFileMethod   : 
+ fuzzTarget      : ../bech32_fuzz ___FILE___ @@ 
+CRASH:
+DESCRIPTION: 
+ORIG_FNAME: 75c5e000000000001595d00000000000.00000002.honggfuzz.cov
+FUZZ_FNAME: /home/onurinanc/honggfuzz_works/firo/src/fuzz/fuzz_bech32_here/SIGABRT.PC.7ffff788ec0c.STACK.18ba2fe484.CODE.-6.ADDR.0.INSTR.mov____%eax,%ebp.fuzz
+PID: 12053
+SIGNAL: SIGABRT (6)
+PC: 0x7ffff788ec0c
+FAULT ADDRESS: 0x0
+INSTRUCTION: mov____%eax,%ebp
+STACK HASH: 00000018ba2fe484
+STACK:
+ <0x00007ffff783e986> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x00007ffff78287f4> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x00007ffff782871b> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x00007ffff7837536> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x0000000000405836> [func:bech32::encode file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x0000000000403ce8> [func:LLVMFuzzerTestOneInput file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x000000000041363f> [func:HonggfuzzMain file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+ <0x00007ffff7829510> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x00007ffff78295c9> [func:UNKNOWN file: line:0 module:/usr/lib64/libc.so.6]
+ <0x0000000000403ac5> [func:_start file: line:0 module:/home/onurinanc/honggfuzz_works/firo/src/fuzz/bech32_fuzz]
+=====================================================================
