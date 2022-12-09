@@ -113,7 +113,7 @@ uint32_t polymod(const data& values)
         // c'(x) = (c1*x^5 + c2*x^4 + c3*x^3 + c4*x^2 + c5*x + v_i) + c0*k(x)
 
         // First, determine the value of c0:
-        uint8_t c0 = c >> 25;
+        uint8_t c0 = (uint8_t) c >> 25;
 
         // Then compute c1*x^5 + c2*x^4 + c3*x^3 + c4*x^2 + c5*x + v_i:
         c = ((c & 0x1ffffff) << 5) ^ v_i;
